@@ -190,7 +190,7 @@ int dvijenie_vverh(int a[100][100],int n, int m)
 
 int main()
 {
-    int a[100][100],m,n,i,j,deistvie,flag_dvijenia;
+    int a[100][100],m,n,i,j,deistvie=0,flag_dvijenia;
 
     printf("\n\n   Select the length of the game box:");
     scanf("%d",&n);
@@ -203,7 +203,7 @@ int main()
 
     dobavlenie_elementa(a,n,m);
 
-    do{
+    while((proverka(a,n,m)==1)&&(deistvie!=27)){
        system("cls");
        raspechatka(a,n,m);
 
@@ -226,7 +226,7 @@ int main()
        default:
            break;
        }
-    }while((proverka(a,n,m)==1)&&(deistvie!=27));
+    }
 
     if (proverka(a,n,m)==0){
             system("cls");
