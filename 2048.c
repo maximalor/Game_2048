@@ -190,7 +190,7 @@ int dvijenie_vverh(int a[100][100],int n, int m)
 
 int main()
 {
-    int a[100][100],m,n,i,j,deistvie=0,flag_dvijenia;
+    int a[100][100],m,n,i,j,deistvie=0,flag_dvijenia,p=1;
 
     printf("\n\n   Select the length of the game box:");
     scanf("%d",&n);
@@ -203,7 +203,7 @@ int main()
 
     dobavlenie_elementa(a,n,m);
 
-    while((proverka(a,n,m)==1)&&(deistvie!=27)){
+    while((p==1)&&(deistvie!=27)){
        system("cls");
        raspechatka(a,n,m);
 
@@ -212,15 +212,19 @@ int main()
        switch(deistvie) {
 
        case 80: flag_dvijenia=dvijenie_vniz(a,n,m);
+                p=proverka(a,n,m);
                 if (flag_dvijenia==1) dobavlenie_elementa(a,n,m);
            break;
        case 77: flag_dvijenia=dvijenie_vpravo(a,n,m);
+                p=proverka(a,n,m);
                 if (flag_dvijenia==1) dobavlenie_elementa(a,n,m);
            break;
        case 72: flag_dvijenia=dvijenie_vverh(a,n,m);
+                p=proverka(a,n,m);
                 if (flag_dvijenia==1) dobavlenie_elementa(a,n,m);
            break;
        case 75: flag_dvijenia=dvijenie_vlevo(a,n,m);
+                p=proverka(a,n,m);
                 if (flag_dvijenia==1) dobavlenie_elementa(a,n,m);
            break;
        default:
