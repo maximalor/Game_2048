@@ -10,3 +10,4 @@
 Изменение 1 для cherry-pick в master.
 Изменение 2 для cherry-pick в master.
 
+Для rebase.
